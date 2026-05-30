@@ -1,0 +1,1 @@
+print (combination [computer], combination[human])
