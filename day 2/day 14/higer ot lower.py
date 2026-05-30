@@ -30,6 +30,8 @@ while game_over==False:
     else:
         print("game over")
         game_over=True
+# try new shits again
+
 
 
 # rando=(random.randint[0,100])
