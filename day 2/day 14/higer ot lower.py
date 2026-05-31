@@ -8,12 +8,14 @@ def new():
     country=so["country"]
     description=so["description"]
 while game_over==False:
-    so=data[random.randint(0,50)]
-    name=so["name"]
-    follow=so["follower_count"]
-    country=so["country"]
-    description=so["description"]
-    do=data[random.randint(0,50)]
+    score=[]
+    if score==[]:
+        death=data[random.randint(0,50)]
+        name=death["name"]
+        follow=death["follower_count"]
+        country=death["country"]
+        description=death["description"]
+        do=data[random.randint(0,50)]
     name2=do["name"]
     follow2=do["follower_count"]
     country2=do["country"]
@@ -22,10 +24,12 @@ while game_over==False:
     print(f"compare B :{name2}, a {description2},from {country2}")
     p=input("higer or lower H or L").lower()
     if p=="h" and follow2>follow:
-        do=so
+        score=+1
+        death=do
         new()
     elif p=="l" and follow2<follow:
-        do=so
+        score=+1
+        death=do
         new()
     else:
         print("game over")
