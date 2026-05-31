@@ -1,3 +1,4 @@
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -47,8 +48,15 @@ nic=2
 dol=23
 money=(0.25*cen,0.12*nic,1*dol)
 re=(sum(money))-cos
+resou=sum()
 if cos>sum(money):
     print("you poor loser me fr fr")
+if sum(resou)<sum(mil,tt,coff):
+    print("not enough resourses")
 else:
+    if order!="espresso":
+        resources["milk"]-mil
+    resources["water"]-tt
+    resources["coffee"]-coff
     print(f"you paid your return value is{re} ")
 print(sum(money))
