@@ -34,29 +34,47 @@ resources = {
 money = {
     "value": 0,
 }
-order=(input("waht order would you like"))
+off=False
+while off==False:
 
-s=MENU[order]
-wate=s["ingredients"]
-cos=s["cost"]
-tt=wate["water"]
-coff=wate["coffee"]
-if order!="espresso":
-    mil=wate["milk"]
-cen=3
-nic=2
-dol=23
-money=(0.25*cen,0.12*nic,1*dol)
-re=(sum(money))-cos
-resou=sum()
-if cos>sum(money):
-    print("you poor loser me fr fr")
-if sum(resou)<sum(mil,tt,coff):
-    print("not enough resourses")
-else:
-    if order!="espresso":
-        resources["milk"]-mil
-    resources["water"]-tt
-    resources["coffee"]-coff
-    print(f"you paid your return value is{re} ")
+    order=(input("waht order would you like\n"))
+    if order in MENU:
+    
+
+        s=MENU[order]
+        wate=s["ingredients"]
+        cos=s["cost"]
+        tt=wate["water"]
+        coff=wate["coffee"]
+        def cal(wate):
+            for i in wate:
+                if resources[i]<wate[i]:
+                    return False
+
+        if order!="espresso":
+            mil=wate["milk"]
+        cen=3
+        nic=2
+        dolatte=23
+        money=(0.25*cen,0.12*nic,1*dol)
+        re=(sum(money))-cos
+
+        if cos>sum(money):
+            print("you poor loser me fr fr")
+        if cal(wate) is False:
+            print("not enough resourses")
+        else:
+            if order!="espresso":
+                rm=resources["milk"]-mil
+            rw=resources["water"]-tt
+            rc=resources["coffee"]-coff
+            print(f"you paid your return value is{re} ")
+    if order not in MENU:
+        print("the order isnt on the menu")
+    ag=input("would you like to go again or see the report??\n")
+    if ag=="report":
+        print(rm , rc , rw , money )
+    if ag=="n":
+     off=True
+    
 print(sum(money))
