@@ -37,3 +37,31 @@ class MoneyMachine:
             print("Sorry that's not enough money. Money refunded.")
             self.money_received = 0
             return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # notes=float(input("how many notes??\n"))
+        # coins=float(input("how many coins??\n"))
+        # death=float(input("how many death??\n"))
+        # paid=(notes*.10,coins*.25,death*3000)
+        # st=float(sum(paid,2))
